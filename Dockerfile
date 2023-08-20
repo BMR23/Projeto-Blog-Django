@@ -49,3 +49,4 @@ USER duser
 
 # Executa o arquivo scripts/commands.sh
 CMD ["commands.sh"]
+# CMD ["/bin/sh", "../scripts/commands.sh"]
