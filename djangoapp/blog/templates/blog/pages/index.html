@@ -1,9 +1,17 @@
-{% extends "blog/base.html" %}
+{% extends 'blog/base.html' %}
 
 {% block content %}
-<h2>TESTE</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet sed quod distinctio excepturi architecto, a iste,
-  dolor pariatur consequuntur assumenda maiores culpa nihil, quasi dolorem. Fuga asperiores quaerat amet voluptatibus?
-</p>
+<main class="main-content section-wrapper">
+  <div class="section-content-wide">
+    <div class="section-gap">
 
+      <div class="card-grid">
+        {% for i in ""|ljust:"9" %}
+        {% include 'blog/partials/_post-card.html' with i=forloop.counter0 %}
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</main>
 {% endblock content %}
